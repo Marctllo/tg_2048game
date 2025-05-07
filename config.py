@@ -1,6 +1,7 @@
 import os
+from dotenv import load_dotenv
 
-class Config:
-    TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")  # Токен бота
-    WEBAPP_URL = "https://your-domain.com"        # URL Web App
-    DATABASE_URI = "sqlite:///database.db"        # Путь к БД
+load_dotenv(dotenv_path='.env')
+
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+WEB_APP_URL = "http://localhost:5000"

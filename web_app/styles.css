@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0e7db;
+    margin: 0;
+    padding: 0;
+}
+
+#game-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 10px;
+    background-color: #faf8ef;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#score-container, #timer-container {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.tile {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    background-color: #cdc1b4;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #776e65;
+    transition: background-color 0.3s, transform 0.2s;
+    user-select: none;
+}
+
+#restart-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #8f7a66;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#restart-button:hover {
+    background-color: #776e65;
+}
+
+#bonus-ui {
+    margin-top: 20px;
+    text-align: left;
+    padding: 10px;
+    background-color: #fff8e1;
+    border: 1px solid #f0c14b;
+    border-radius: 5px;
+}
+
+#bonus-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.bonus-message {
+    background-color: #8bc34a;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    #game-container {
+        max-width: 95%;
+        margin: 20px auto;
+    }
+    .tile {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 20px;
+    }
+}
